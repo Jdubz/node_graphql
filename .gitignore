@@ -1,9 +1,8 @@
-# Dependency directories
-src/node_modules/
-
 .DS_Store
-.idea/
+.idea
 
 auth/
+
+src/node_modules/
 src/dist/
 src/ormconfig.json
