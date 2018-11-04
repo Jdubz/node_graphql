@@ -1,3 +1,4 @@
+const { find, filter } = require('lodash');
 
 const myResolvers = {
   Query: {
