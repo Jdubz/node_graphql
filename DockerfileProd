@@ -1,0 +1,12 @@
+FROM node:10-alpine
+
+ARG APP=/src
+RUN mkdir ${APP}
+RUN mkdir ${APP}/Server
+COPY ./src/dist ${APP}/Server
+COPY ./src/package.json ${APP}
+COPY ./src/nodemon.json ${APP}
+COPY ./src/ormconfig.json ${APP}
+
+WORKDIR ${APP}
+RUN npm install --unsafe-perm --production

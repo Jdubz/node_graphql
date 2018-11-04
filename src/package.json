@@ -1,0 +1,45 @@
+{
+  "name": "node_graphql_gke_boilerplate",
+  "version": "1.0.0",
+  "description": "Animal labs server boilerplate for hosting a graphQL API on google kubernetes engine using Nodejs",
+  "main": "Server/index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node Server/index.js",
+    "tsc": "tsc",
+    "develop": "concurrently --kill-others \"tsc -w\" \"nodemon dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/animallabs/Node_graphql_gke_boilerplate.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "graphgl",
+    "gke",
+    "kubernetes",
+    "apollo"
+  ],
+  "author": "animal labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/animallabs/Node_graphql_gke_boilerplate/issues"
+  },
+  "homepage": "https://github.com/animallabs/Node_graphql_gke_boilerplate#readme",
+  "dependencies": {
+    "@types/node": "^10.12.2",
+    "apollo-server": "^2.1.0",
+    "graphql": "^14.0.2",
+    "pg": "^7.6.0",
+    "reflect-metadata": "^0.1.12",
+    "typeorm": "^0.2.8"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "graphql-typescript-definitions": "^0.13.2",
+    "nodemon": "^1.18.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
+  }
+}
