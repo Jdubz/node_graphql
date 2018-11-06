@@ -6,6 +6,7 @@ services:
       dockerfile: DockerfileDev
     volumes:
       - ./src/Server:/src/Server
+      - ./src/dist:/src/dist
     command: npm run develop
     ports:
       - "4000:4000"

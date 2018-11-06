@@ -6,7 +6,6 @@
   "scripts": {
     "test": "test",
     "start": "node Server/index.js",
-    "tsc": "tsc",
     "develop": "concurrently --kill-others \"tsc -w\" \"nodemon dist/index.js\""
   },
   "repository": {
@@ -30,7 +29,11 @@
   "dependencies": {
     "@types/node": "^10.12.2",
     "apollo-server": "^2.1.0",
+    "apollo-server-express": "^2.1.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
     "pg": "^7.6.0",
     "reflect-metadata": "^0.1.12",
     "typeorm": "^0.2.8"
