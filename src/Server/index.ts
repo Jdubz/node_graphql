@@ -23,7 +23,7 @@ const schema = {
   ]
 };
 
-// createConnection(Object.assign(dbConfig, schema)).then((...args) => {
+createConnection(Object.assign(dbConfig, schema)).then((...args) => {
   console.log('Database connection established');
 
   const app = express();
@@ -37,7 +37,7 @@ const schema = {
   app.listen({ port },() => {
     console.log(`🚀  Server ready at http://0.0.0.0:${port}${server.graphqlPath}`);
   });
-// }).catch(err => {
-//   console.error('db connection failed', err);
-// });
-//
+}).catch(err => {
+  console.error('db connection failed', err);
+});
+
