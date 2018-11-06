@@ -12,12 +12,17 @@ const typeDefs = gql`
     id: Int!
     user_id(id: Int!): User
     message: String
-    timestamp: String
+    createdAt: Date
   }
 
   type Query {
     messages: [Message]
     user: User
+  }
+  
+  type Mutation {
+    addUser(username: String, email: String): User
+    addMessage(user_id: Int, message: String): Message
   }
 `;
 

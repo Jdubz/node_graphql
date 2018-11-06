@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import User from './entity/User';
-import Message from './entity/message';
+import Message from './entity/Message';
 
 const myResolvers = {
   Query: {
