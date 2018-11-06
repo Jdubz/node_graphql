@@ -8,6 +8,7 @@ COPY ./src/package.json ${APP}
 COPY ./src/nodemon.json ${APP}
 COPY ./src/tsconfig.json ${APP}
 COPY ./src/ormconfig.json ${APP}
+COPY ./auth ${APP}/auth
 
 WORKDIR ${APP}
 RUN npm install --unsafe-perm

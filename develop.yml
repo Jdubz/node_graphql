@@ -4,6 +4,9 @@ services:
     build:
       context: .
       dockerfile: DockerfileDev
+    environment:
+      - NODE_ENV=development
+      - GOOGLE_CLOUD_PROJECT=graphql-boilerplate
     volumes:
       - ./src/Server:/src/Server
       - ./src/dist:/src/dist

@@ -12,7 +12,7 @@ const typeDefs = gql`
     id: Int!
     user_id(id: Int!): User
     message: String
-    createdAt: Date
+    createdAt: Int!
   }
 
   type Query {

@@ -14,5 +14,5 @@ export default class Message {
   user_id: User;
 
   @CreateDateColumn({ type: "timestamp" })
-  createdAt: Date;
+  createdAt: number;
 }

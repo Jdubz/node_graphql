@@ -27,16 +27,19 @@
   },
   "homepage": "https://github.com/animallabs/Node_graphql_gke_boilerplate#readme",
   "dependencies": {
+    "@google-cloud/logging-winston": "^0.10.2",
     "@types/node": "^10.12.2",
     "apollo-server": "^2.1.0",
     "apollo-server-express": "^2.1.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "express-winston": "^3.0.1",
     "graphql": "^14.0.2",
     "graphql-tools": "^4.0.3",
     "pg": "^7.6.0",
     "reflect-metadata": "^0.1.12",
-    "typeorm": "^0.2.8"
+    "typeorm": "^0.2.8",
+    "winston": "^3.1.0"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",
