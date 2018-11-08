@@ -4,7 +4,7 @@ import User from './User';
 @Entity()
 export default class Message {
 
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn()
   id: number;
 
   @Column("text")

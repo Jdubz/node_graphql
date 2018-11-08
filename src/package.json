@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "start": "node Server/index.js",
-    "develop": "concurrently --kill-others \"tsc -w\" \"nodemon dist/index.js\""
+    "develop": "ts-node-dev --respawn --transpileOnly Server/index.ts"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,6 @@
   "homepage": "https://github.com/animallabs/Node_graphql_gke_boilerplate#readme",
   "dependencies": {
     "@google-cloud/logging-winston": "^0.10.2",
-    "@types/node": "^10.12.2",
     "apollo-server": "^2.1.0",
     "apollo-server-express": "^2.1.0",
     "body-parser": "^1.18.3",
@@ -42,9 +41,9 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "concurrently": "^4.0.1",
+    "@types/node": "^10.12.2",
     "graphql-typescript-definitions": "^0.13.2",
-    "nodemon": "^1.18.5",
+    "ts-node-dev": "^1.0.0-pre.30",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
   }

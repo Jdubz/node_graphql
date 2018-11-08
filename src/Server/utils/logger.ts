@@ -6,7 +6,7 @@ const loggingWinston = new LoggingWinston({
   keyFilename: './auth/graphql-boilerplate.json'
 });
 
-const log = winston.createLogger({
+export const log = winston.createLogger({
   level: 'info',
   transports: [
     new winston.transports.Console(),
@@ -37,12 +37,7 @@ const errorLogger = expressWinston.errorLogger({
   ],
 });
 
-const initLogs = (app) => {
+export const initLogs = (app) => {
   app.use(requestLogger);
   app.use(errorLogger);
-};
-
-module.exports = {
-  initLogs,
-  log
 };

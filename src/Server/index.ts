@@ -1,15 +1,16 @@
 const { ApolloServer } = require('apollo-server-express');
 const typeDefs = require('./schema/typeDefs');
 const resolvers = require('./schema/resolvers');
+
+console.log(resolvers);
 const mocks = require('./schema/mocks');
 
-
-import { initLogs, log } from './utils/logging';
+import { initLogs, log } from './utils/logger';
 
 const express = require('express');
 const bodyParser = require('body-parser');
 
-import db from './schema/controllers/connect';
+import db from './schema/dbConnect';
 
 log.info('Connecting to DB');
 db.connect()

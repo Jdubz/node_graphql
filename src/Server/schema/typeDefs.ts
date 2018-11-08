@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server-express';
 
-const typeDefs = gql`
+module.exports = gql`
   type User {
     id: Int!
     username: String!
@@ -16,14 +16,12 @@ const typeDefs = gql`
   }
 
   type Query {
-    messages: [Message]
-    user: User
+    allUsers: [User]
+    User: User
   }
   
   type Mutation {
-    addUser(username: String, email: String): User
-    addMessage(user_id: Int, message: String): Message
+    createUser(username: String, email: String): User
+    createMessage(user_id: Int, message: String): Message
   }
 `;
-
-module.exports = typeDefs;
