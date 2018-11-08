@@ -4,6 +4,14 @@ server boilerplate for hosting a graphQL API on google kubernetes engine using N
 ## cli dependencies:
 gcloud sdk  
 kubectl  
+docker
+docker-compose
 
 ## setup
-create GCP project and update gcloud_setup.sh with project name  
+put GCP project specifics into config.sh  
+create project service-account and put credentials in auth/
+database credentials go in src/ormconfig.json
+
+### development
+run ./develop.sh
+go to localhost:4000/graphql for graphql playground

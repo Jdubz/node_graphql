@@ -2,6 +2,7 @@
 .idea
 
 auth/
+config.sh
 
 src/node_modules/
 src/dist/

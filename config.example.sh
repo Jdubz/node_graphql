@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-project=surviral-game
+project=mygcpproject
 zone=us-west1-a
-cluster=surviral
-service=surviral-server
-image=surviral-server:v1
-keyfile=auth/surviral-game.json
+cluster=mycluster
+service=myserver
+image=project-server:v1
+keyfile=auth/myauthfile.json
 
 gcloud auth activate-service-account --key-file $keyfile
 gcloud config set project $project
