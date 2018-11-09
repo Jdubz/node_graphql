@@ -4,9 +4,11 @@
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "lib": [
       "es2017",
       "dom",

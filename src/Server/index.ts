@@ -1,14 +1,13 @@
-const { ApolloServer } = require('apollo-server-express');
-const typeDefs = require('./schema/typeDefs');
-const resolvers = require('./schema/resolvers');
+import { ApolloServer } from 'apollo-server-express'
+import typeDefs from './schema/typeDefs'
+import resolvers from './schema/resolvers'
 
-console.log(resolvers);
-const mocks = require('./schema/mocks');
+import mocks from './schema/mocks'
 
 import { initLogs, log } from './utils/logger';
 
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express'
+import bodyParser from 'body-parser'
 
 import db from './schema/dbConnect';
 

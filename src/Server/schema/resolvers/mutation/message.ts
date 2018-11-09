@@ -5,7 +5,7 @@ import { log } from '../../../utils/logger'
 
 export default {
   async createMessage(root: any, args: any, context: any, info: any) {
-    log.info(args);
-    log.info(context);
+
+    return await getConnection().manager.save()
   }
 }

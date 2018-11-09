@@ -1,7 +1,15 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
 
 @Entity()
-export default class User {
+export default class User extends BaseEntity {
+
+  constructor(user: {
+    username: string,
+    email?: string,
+  }) {
+    super();
+    Object.assign(this, user);
+  }
 
   @PrimaryGeneratedColumn()
   id: number;

@@ -4,8 +4,8 @@ import { log } from '../../../utils/logger'
 
 export default {
   async createUser(root: any, args: any, context: any, info: any) {
-    log.info(args);
-    log.info(context);
-    return 'bleep'
+    log.info('createUser args ' + args);
+    const newUser = new User(args);
+    return await newUser.save();
   }
 }
