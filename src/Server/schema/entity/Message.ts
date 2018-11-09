@@ -1,8 +1,13 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, CreateDateColumn } from 'typeorm';
-import User from './User';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, CreateDateColumn, BaseEntity } from 'typeorm';
+import { User } from './User';
 
 @Entity()
-export default class Message {
+export class Message extends BaseEntity {
+
+  constructor(msg) {
+    super();
+    Object.assign(this, msg);
+  }
 
   @PrimaryGeneratedColumn()
   id: number;

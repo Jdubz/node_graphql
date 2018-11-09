@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
 
 @Entity()
-export default class User extends BaseEntity {
+export class User extends BaseEntity {
 
   constructor(user: {
     username: string,

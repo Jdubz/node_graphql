@@ -1,6 +1,6 @@
 import { getConnection } from 'typeorm';
-import User from '../../entity/User';
-import Message from '../../entity/Message';
+import { User } from '../../entity/User';
+import { Message } from '../../entity/Message';
 import { log } from '../../../utils/logger'
 
 export default {
