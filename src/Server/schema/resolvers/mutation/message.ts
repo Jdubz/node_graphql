@@ -4,6 +4,7 @@ import { log } from '../../../utils/logger'
 
 export default {
   async createMessage(root: any, args: any, context: any, info: any) {
+    console.log(args)
     const newMessage = new Message(args);
     return await newMessage.save()
   }

@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, BaseEntity, OneToMany } from 'typeorm';
+import { Message } from './Message';
 
 @Entity()
 export class User extends BaseEntity {
@@ -19,4 +20,7 @@ export class User extends BaseEntity {
 
   @Column('text')
   email: string;
+
+  @OneToMany(type => Message, message => Message.user)
+  messages: Message[];
 }

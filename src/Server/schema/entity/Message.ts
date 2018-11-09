@@ -1,10 +1,12 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, CreateDateColumn, BaseEntity } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, CreateDateColumn, BaseEntity, JoinColumn } from 'typeorm';
 import { User } from './User';
 
 @Entity()
 export class Message extends BaseEntity {
 
-  constructor(msg) {
+  constructor(msg: {
+    message: string
+  }) {
     super();
     Object.assign(this, msg);
   }
@@ -15,9 +17,9 @@ export class Message extends BaseEntity {
   @Column("text")
   message: string;
 
-  @ManyToOne(type => User)
-  user_id: User;
+  @ManyToOne(type => User, user => user.messages)
+  user: User;
 
   @CreateDateColumn({ type: "timestamp" })
-  createdAt: number;
+  createdAt: Date;
 }
